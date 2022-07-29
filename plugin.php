@@ -21,6 +21,9 @@ yourls_add_action('infos_keyword_not_found', 'ppij_redirect_not_found');
 yourls_add_action('redirect_no_keyword', 'ppij_redirect_not_found');
 yourls_add_action('infos_no_keyword', 'ppij_redirect_not_found');
 
+// Add action if the loader failed
+yourls_add_action('loader_failed', 'ppij_redirect_not_found');
+
 function ppij_redirect_not_found() {
     yourls_redirect('https://ppijerman.org', 302);
     die();
